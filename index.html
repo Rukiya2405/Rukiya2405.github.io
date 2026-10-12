@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Christian Palentinos | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#">Dev Christian</a>
+
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle Theme">
+      <span id="themeIcon" aria-hidden="true">🌙</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Hi, I’m <span class="accent">John Christian Palentinos</span></h1>
+      <p class="subtitle">3rd Year BSIT Student | Aspiring Web Developer and Backend Engineer</p>
+      <div class="hero-actions">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn btn-outline" href="#contact">Contact Me</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        I'm a 3rd-year BSIT student with a passion for web development and backend engineering. I enjoy creating efficient and scalable
+        web applications, and I'm always eager to learn new technologies and improve my skills.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul class="chips">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li>
+        <li>PHP (learning)</li><li>Laravel (learning)</li>
+        <li>Node.js (learning)</li><li>Express (learning)</li>
+        <li>MySQL</li>
+        <li>Flutter/Dart</li>
+        <li>Firebase Auth</li><li>Firestore</li><li>App Check</li>
+        <li>REST APIs</li>
+        <li>Git/GitHub</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>EcoScan</h3>
+          <p>
+            EcoScan is a Flutter app that uses the camera to scan waste and provides environmental
+            info plus instructions on how to recycle or dispose of it properly.
+          </p>
+          <div class="card-links">
+            <button class="linklike" data-open="ecoscanModal" type="button">Details</button>
+            <a href="https://github.com/Rukiya2405/EcoScan" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Next Project (Coming Soon)</h3>
+          <p>I’m still learning and working on new projects. Check back soon!</p>
+          <div class="card-links">
+            <button class="linklike" data-open="comingSoonModal" type="button">Details</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Want to collaborate or chat? Email me:</p>
+      <a class="btn" href="mailto:jhnchristian3@gmail.com">jhnchristian3@gmail.com</a>
+    </section>
+  </main>
+
+  <!-- EcoScan Modal -->
+  <dialog id="ecoscanModal" class="modal">
+    <div class="modal-head">
+      <h3>EcoScan — Flutter + Firebase + Gemini AI</h3>
+      <button class="icon-btn" data-close type="button">Close</button>
+    </div>
+
+    <div class="modal-grid">
+      <div class="gallery">
+        <!-- WebP with PNG fallback -->
+        <picture>
+          <source srcset="assets/img/ecoscan/dashboard.webp" type="image/webp">
+          <img
+            id="ecoscanMainImg"
+            class="gallery-main"
+            src="assets/img/ecoscan/dashboard.png"
+            alt="EcoScan dashboard screen"
+            loading="lazy"
+          />
+        </picture>
+
+        <div class="gallery-thumbs">
+          <button class="thumb is-active" type="button" 
+                  data-webp="assets/img/ecoscan/dashboard.webp" 
+                  data-png="assets/img/ecoscan/dashboard.png" 
+                  data-alt="EcoScan dashboard screen">
+            <img src="assets/img/ecoscan/dashboard.png" alt="">
+          </button>
+
+          <button class="thumb" type="button" 
+                  data-webp="assets/img/ecoscan/login.webp" 
+                  data-png="assets/img/ecoscan/login.png" 
+                  data-alt="EcoScan login screen">
+            <img src="assets/img/ecoscan/login.png" alt="">
+          </button>
+        </div>
+      </div>
+
+      <div class="case">
+        <p>
+          A school project mobile app that helps users identify waste and provides eco-friendly disposal guidance.
+        </p>
+        <ul>
+          <li><strong>Firebase:</strong> Auth, Firestore, App Check</li>
+          <li><strong>AI:</strong> Gemini AI (classification / eco guidance logic)</li>
+          <li><strong>Focus:</strong> secure auth flow + protected backend resources + clean UX</li>
+        </ul>
+
+        <div class="case-actions">
+          <a class="btn btn-outline" href="https://github.com/Rukiya2405/EcoScan" target="_blank" rel="noreferrer">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Coming Soon Modal -->
+  <dialog id="comingSoonModal" class="modal">
+    <div class="modal-head">
+      <h3>Next Project</h3>
+      <button class="icon-btn" data-close type="button">Close</button>
+    </div>
+    <p>This slot is reserved for my next web/backend project. I’ll add a case study here soon.</p>
+  </dialog>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> John Christian Palentinos</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
